@@ -6,59 +6,63 @@
     android:layout_height="match_parent"
     android:background="#0A0E32">
 
-    <FrameLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-    </FrameLayout>
-
-    <ImageView
-        android:id="@+id/share_iv"
-        android:layout_width="45dp"
-        android:layout_height="45dp"
-        android:layout_marginEnd="4dp"
-        android:layout_marginBottom="12dp"
-        app:layout_constraintBottom_toBottomOf="@+id/movie_poster_details"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:srcCompat="@drawable/share_icon2" />
-
-    <TextView
-        android:id="@+id/movie_title_details"
-        android:layout_width="411dp"
-        android:layout_height="51dp"
-        android:layout_marginTop="8dp"
-        android:text="Title\ntitle"
-        android:textColor="#FFFFFF"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/movie_poster_details" />
-
-    <ImageView
-        android:id="@+id/movie_poster_details"
-        android:layout_width="match_parent"
-        android:layout_height="429dp"
-        app:layout_constraintBottom_toTopOf="@+id/movie_title_details"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:srcCompat="@tools:sample/backgrounds/scenic" />
-
-    <TextView
-        android:id="@+id/movie_overview_details"
-        android:layout_width="match_parent"
-        android:layout_height="192dp"
-        android:layout_marginTop="8dp"
-        android:text="Overview"
-        android:textColor="#FFFFFF"
+        android:layout_height="match_parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/movie_title_details"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/movie_title_details"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="16dp"
+                android:text="Title\ntitle"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/movie_poster_details"
+                android:layout_width="300dp"
+                android:layout_height="412dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="16dp"
+                tools:srcCompat="@drawable/poster" />
+
+            <ImageView
+                android:id="@+id/share_iv"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="8dp"
+                app:srcCompat="@drawable/share_icon2" />
+
+            <TextView
+                android:id="@+id/movie_overview_details"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="8dp"
+                android:text="Overview"
+                android:textColor="#FFFFFF" />
+        </LinearLayout>
+    </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
