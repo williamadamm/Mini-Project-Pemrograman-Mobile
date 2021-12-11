@@ -1,3 +1,12 @@
 # Mini-Project-Pemrograman-Mobile
 
-Aplikasi sederhana yang dapat mengambil informasi film dari sebuah API
+Aplikasi Katalog Film sederhana dengan TMDB API
+
+fitur:
+- menampilkan film-film yang sedang populer
+- menampilkan detail(overview) dari film yang dipilih
+- membagikan informasi film yang dipilih ke aplikasi lain (sosial media)
+
+Dibuat oleh: 
+William Adam
+D121191033
