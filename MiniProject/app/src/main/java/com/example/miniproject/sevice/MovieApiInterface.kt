@@ -10,7 +10,4 @@ interface MovieApiInterface {
 
     @GET("movie/popular?api_key=ba9cac46b8aa862fb6fe83185416f2f1")
     fun getMovieList(): Call<MovieResponse>
-
-    @GET("movie/{id}?api_key=ba9cac46b8aa862fb6fe83185416f2f1")
-    fun getMovieDetails(@Path("id") id : String?): Call<MovieResponse>
 }

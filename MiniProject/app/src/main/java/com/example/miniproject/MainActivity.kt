@@ -3,6 +3,7 @@ package com.example.miniproject
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.ImageView
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.miniproject.models.Movie
@@ -24,8 +25,6 @@ class MainActivity : AppCompatActivity() {
         getMovieData { movies : List<Movie> ->
             rv_movies_list.adapter = MovieAdapter(movies,object :MovieAdapter.onAdapterListener{
                 override fun onClick(movie: Movie) {
-//                    Toast.makeText(applicationContext, movie.title, Toast.LENGTH_SHORT).show()
-
                     startActivity(
                         Intent(applicationContext,MovieDetailsActivity::class.java)
                             .putExtra("Movie_title", movie.title)
@@ -38,7 +37,16 @@ class MainActivity : AppCompatActivity() {
 
             })
         }
+        info_view.setOnClickListener(){
+            startActivity(Intent(this,infoActivity::class.java))
+        }
     }
+
+
+//    public fun onClickInfo(view: ImageView) {
+//
+//    }
+
 
     private fun getMovieData(Callback:(List<Movie>) -> Unit){
 

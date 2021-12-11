@@ -11,31 +11,48 @@
         android:layout_width="409dp"
         android:layout_height="729dp"
         android:fillViewport="true"
-        tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="1dp">
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/textView"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="16dp"
-                android:layout_marginTop="16dp"
-                android:text="Movie Catalog"
-                android:textColor="#FAFAFA"
-                android:textSize="30sp"
-                android:textStyle="bold" />
+                android:orientation="horizontal"
+                android:translationX="-23dp">
+
+                <ImageView
+                    android:id="@+id/info_view"
+                    android:layout_width="100px"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:translationX="380dp"
+                    app:srcCompat="@android:drawable/ic_menu_info_details" />
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginTop="16dp"
+                    android:text="TMDB Movie Catalog"
+                    android:textColor="#FAFAFA"
+                    android:textSize="30sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
 
             <TextView
                 android:id="@+id/textView2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="16dp"
-                android:text="Popular Movies"
+                android:text="Popular Movies Currently Showing:"
                 android:textColor="#F4F4F4" />
 
             <androidx.recyclerview.widget.RecyclerView
@@ -43,6 +60,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginTop="16dp" />
+
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>
