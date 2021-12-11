@@ -43,10 +43,6 @@ class MainActivity : AppCompatActivity() {
     }
 
 
-//    public fun onClickInfo(view: ImageView) {
-//
-//    }
-
 
     private fun getMovieData(Callback:(List<Movie>) -> Unit){
 
